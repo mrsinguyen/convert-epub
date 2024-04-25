@@ -55,7 +55,7 @@ function convert {
   cover=`find $path -type f -name "logo.*"`
   target=$(configGet '.target_folder')
   epub_path="$target/$name.epub"
-  recipe_path="recipe/$recipe.recipe"
+  recipe_path="$(pwd)/recipe/$recipe.recipe"
 
   if [ ! -f "$epub_path" ]; then
     echo "Proccessing epub format ...."
